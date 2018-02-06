@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PruebaShadow" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/PruebaShadow" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/PruebaShadow" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="lib/sdl2/include/SDL2" />
+			<Add directory="lib/SDL2_mixer-2.0.1/i686-w64-mingw32/include/SDL2" />
+			<Add directory="lib/glew-1.10.0/include/GL" />
+			<Add directory="lib/SDL2_ttf-2.0.14/i686-w64-mingw32/include/SDL2" />
+		</Compiler>
+		<Linker>
+			<Add option="-lmingw32 -lSDL2main -lSDL2 -lopengl32 -lglu32 -lglew32 -lglew32mx -lSDL2_mixer -lSDL2_ttf" />
+			<Add directory="lib/sdl2/lib" />
+			<Add directory="lib/glew-1.10.0/lib" />
+			<Add directory="lib/SDL2_mixer-2.0.1/i686-w64-mingw32/lib" />
+			<Add directory="lib/SDL2_ttf-2.0.14/i686-w64-mingw32/lib" />
+		</Linker>
+		<Unit filename="camera.cpp" />
+		<Unit filename="camera.h" />
+		<Unit filename="lightcamera.cpp" />
+		<Unit filename="lightcamera.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="matrix4f.cpp" />
+		<Unit filename="matrix4f.h" />
+		<Unit filename="shader.cpp" />
+		<Unit filename="shader.h" />
+		<Unit filename="shadowtexture.cpp" />
+		<Unit filename="shadowtexture.h" />
+		<Unit filename="stb_image.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stb_image.h" />
+		<Unit filename="structdata.h" />
+		<Unit filename="texture.cpp" />
+		<Unit filename="texture.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
