@@ -1,2 +1,2 @@
-# CelShadingTFM
-Repositorio for testing and creation of an algorithm of cel shading 
+# Animation system in OpenGL (TFM)
+Repository for testing and creation of a complex animation system.
