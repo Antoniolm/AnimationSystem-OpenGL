@@ -1,4 +1,4 @@
 *.o
 *.exe
-celShading/lib/*
+animationSystemTesting/lib/*
 *.dll
