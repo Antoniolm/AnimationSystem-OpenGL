@@ -22,6 +22,8 @@
 
 #include "../../lib/rapidjson/document.h"
 #include <iostream>
+#include <sstream>
+#include <vector>
 
 using namespace std;
 class SkinLoader
@@ -40,6 +42,8 @@ class SkinLoader
     protected:
 
     private:
+        vector<string> jointsID;
+
 };
 
 #endif // SKINLOADER_H

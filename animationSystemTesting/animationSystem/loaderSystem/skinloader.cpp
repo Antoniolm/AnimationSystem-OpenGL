@@ -21,6 +21,22 @@
 
 SkinLoader::SkinLoader(const rapidjson::Value & skinFeature){
   cout<< skinFeature["source"][0]["Name_array"]["#text"].GetString()<<endl;
+
+  istringstream tokensbuf(skinFeature["source"][0]["Name_array"]["#text"].GetString());
+  istream_iterator<string> tokensbeg(tokensbuf), tokensend;
+
+  vector<string> tokens(tokensbeg, tokensend);
+
+  for(unsigned i=0;i<tokens.size();i++)
+    cout<< "Elem("<<i<<")="<< tokens[i]<<endl;
+
+  istringstream buf(skinFeature["source"][2]["float_array"]["#text"].GetString());
+  istream_iterator<float> beg(buf), end;
+
+  vector<float> weights(beg, end);
+
+  for(unsigned i=0;i<weights.size();i++)
+    cout<< "Elem("<<i<<")="<< (float)weights[i]<<endl;
 }
 
 //**********************************************************************//
