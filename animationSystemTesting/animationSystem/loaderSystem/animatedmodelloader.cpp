@@ -19,8 +19,20 @@
 
 #include "animatedmodelloader.h"
 
-AnimatedModelLoader::AnimatedModelLoader(){
+AnimatedModelLoader::AnimatedModelLoader(string modelFile){
+    //Open file
+    FILE * fp = fopen(modelFile.c_str(), "rb"); // non-Windows use "r"
+    char readBuffer[65536];
+    rapidjson::FileReadStream is(fp, readBuffer, sizeof(readBuffer));
+    rapidjson::Document document;
+    document.ParseStream(is);
+    fclose(fp);
+    cout<< "Created"<<endl;
 
+    cout<< "< Loading skin >"<< endl;
+    const rapidjson::Value & skinFeature=document["COLLADA"]["library_controllers"]["controller"]["skin"];
+    SkinLoader * skinLoader=new SkinLoader(skinFeature);
+    delete skinLoader;
 }
 
 //**********************************************************************//

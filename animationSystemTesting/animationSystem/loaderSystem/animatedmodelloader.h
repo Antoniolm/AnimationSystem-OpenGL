@@ -20,13 +20,22 @@
 #ifndef ANIMATEDMODELLOADER_H
 #define ANIMATEDMODELLOADER_H
 
+#include <string>
+#include <iostream>
+#include "skinloader.h"
+#include "../../lib/rapidjson/document.h"
+#include "../../lib/rapidjson/stringbuffer.h"
+#include "../../lib/rapidjson/filereadstream.h"
+
+using namespace std;
+
 class AnimatedModelLoader
 {
     public:
         //////////////////////////////////////////////////////////////////////////
         /** Constructor */
         //////////////////////////////////////////////////////////////////////////
-        AnimatedModelLoader();
+        AnimatedModelLoader(string modelFile);
 
         //////////////////////////////////////////////////////////////////////////
         /** Destructor */

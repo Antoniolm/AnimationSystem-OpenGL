@@ -20,13 +20,17 @@
 #ifndef SKINLOADER_H
 #define SKINLOADER_H
 
+#include "../../lib/rapidjson/document.h"
+#include <iostream>
+
+using namespace std;
 class SkinLoader
 {
     public:
         //////////////////////////////////////////////////////////////////////////
         /** Constructor */
         //////////////////////////////////////////////////////////////////////////
-        SkinLoader();
+        SkinLoader(const rapidjson::Value & skinFeature);
 
         //////////////////////////////////////////////////////////////////////////
         /** Destructor */

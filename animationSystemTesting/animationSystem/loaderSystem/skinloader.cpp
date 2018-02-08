@@ -19,8 +19,8 @@
 
 #include "skinloader.h"
 
-SkinLoader::SkinLoader(){
-
+SkinLoader::SkinLoader(const rapidjson::Value & skinFeature){
+  cout<< skinFeature["source"][0]["Name_array"]["#text"].GetString()<<endl;
 }
 
 //**********************************************************************//
